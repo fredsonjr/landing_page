@@ -57,6 +57,36 @@ p{
     margin-bottom: 2rem;
 }
 
+.responsive-table {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 360px;
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+table td, table th{
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--light-gray-color); 
+}
+
+tfoot td, table th {
+    background-color: #EEEEEE;
+}
+
 .main-bg {
     background-image: url('../img/main-bg.svg.svg');
     background-size: cover; /*cover*/
@@ -72,7 +102,7 @@ p{
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 8rem var(--gap);
 }
 
 .section {
@@ -150,7 +180,7 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content, .intro-img{
@@ -176,13 +206,13 @@ p{
     text-align: center;
     display: flex;
     height: 100vh;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
 .grid-one-content {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-flow: column wrap;
     justify-content: center;
 }
@@ -220,4 +250,19 @@ p{
     left: 0;
     transform: rotate(5deg);
 
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-width: 360px;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
